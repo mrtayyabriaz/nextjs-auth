@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJs Auth
 
-## Getting Started
+This is a Next.js authentication with mongoDB
 
-First, run the development server:
+## Setup .env
+
+```js
+MONGOOSE_URI = 'mongooseURL'
+DOMAIN = http://localhost:3000
+JWT_SECRET = 'JWTsecret'
+
+MAILTRAP_USER = ''
+MAILTRAP_PASS = ''
+```
+
+or rename `.env.sample` to `.env`
+
+signup to `cloud.mongodb.com` update `mongooseURL`
+signup to `mailtrap.io` update `username` `password`
+
+### run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Signup
 
-## Learn More
+Input: `username` `email` `password`
 
-To learn more about Next.js, take a look at the following resources:
+### Login
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Input: `email` `password`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Forgot Password
 
-## Deploy on Vercel
+Input: `email`
+Receive reset Email with encripted token and link to reset password `valid` for 1 hour
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Profile
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Output: `MongoId` `username` `email`
+
+### reset
+
+input: `password`
+output: `update password`
+
+ENJOY THE AUTH
+
+### Developer: **Tayyab Riaz**
+
+Website: [mrtayyabriaz.netlify.app](https://mrtayyabriaz.netlify.app/)
+
+Github: [github/mrtayyabriaz](github.com/mrtayyabriaz)
