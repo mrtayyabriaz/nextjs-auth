@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import Link from 'next/link';
 
 
-export default function page() {
+export default function Forgot() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(false)

@@ -5,7 +5,7 @@ import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 
-export default function page() {
+export default function Profile() {
   const [user, setUser] = useState({ _id: '', username: '', email: '', success: false })
   const router = useRouter()
   const getUserInfo = async () => {
